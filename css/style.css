@@ -98,7 +98,7 @@ a:focus {
 }
 
 .header_section {
-  background-color: #404144;
+  background-color: #ffff;
 }
 
 .header_section .container-fluid {
@@ -108,7 +108,7 @@ a:focus {
 
 .header_section .header_top {
   padding: 15px 0;
-  background-color: #242526;
+  background-color: #ffff;
 }
 
 .header_section .header_bottom {
@@ -183,7 +183,7 @@ a:focus {
 }
 
 .navbar-brand span {
-  color: #ffffff;
+  color: #000000;
 }
 
 .custom_nav-container {
@@ -192,7 +192,7 @@ a:focus {
 
 .custom_nav-container .navbar-nav .nav-item .nav-link {
   padding: 10px 25px;
-  color: #ffffff;
+  color: #000000;
   text-align: center;
 }
 
@@ -258,6 +258,36 @@ a:focus {
   top: 0;
 }
 
+/* MENU FIXO + TRANSPARENTE + EFEITO DE ROLAGEM */
+.header_section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  background-color: #ffff; /* começa transparente */
+  transition: 0.5s
+}
+
+/* Remove o fundo do topo e bottom para ficar transparente */
+.header_section .header_top,
+.header_section .header_bottom {
+  background-color: transparent !important;
+}
+
+/* Quando rolar a página */
+.header_section.scrolled {
+  background-color: #ffb13cee ;/* fundo escuro elegante */
+  box-shadow: 0 2px 10px #ff3c3c9d;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/* Ajuste para evitar que o conteúdo suba atrás do menu */
+.hero_area {
+  padding-top: 140px; /* ajuste conforme a altura do seu menu */
+}
+
 /*end header section*/
 /* slider section */
 .slider_section {
@@ -287,7 +317,7 @@ a:focus {
 }
 
 .slider_section .detail-box {
-  color: #ffffff;
+  color: #ff3c3c;
 }
 
 .slider_section .detail-box h1 {
@@ -300,7 +330,7 @@ a:focus {
   display: inline-block;
   padding: 10px 45px;
   background-color: #F2C12E;
-  color: #ffffff;
+  color: #ff3c3c;
   border-radius: 5px;
   border: 1px solid #F2C12E;
   -webkit-transition: all 0.3s;
@@ -378,8 +408,7 @@ a:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.9)), to(rgba(0, 0, 0, 0.55)));
-  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.55));
+
 }
 
 .service_section {
