@@ -4,7 +4,7 @@ html{
 
 body {
   font-family: "Poppins", sans-serif;
-  color: #F2C12E;
+  color: #000000;
   background-color: #ffffff;
   overflow-x: hidden;
 }
@@ -330,7 +330,7 @@ a:focus {
   display: inline-block;
   padding: 10px 45px;
   background-color: #F2C12E;
-  color: #ff3c3c;
+  color: #000000;
   border-radius: 5px;
   border: 1px solid #F2C12E;
   -webkit-transition: all 0.3s;
@@ -399,6 +399,7 @@ a:focus {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+     opacity: 0.2;
 }
 
 .slider_section .slider-bg::before {
