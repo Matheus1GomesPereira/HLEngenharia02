@@ -399,7 +399,7 @@ a:focus {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-     opacity: 0.2;
+     opacity: 0.18;
 }
 
 .slider_section .slider-bg::before {
