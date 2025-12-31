@@ -11,7 +11,10 @@
   <link rel="icon" href="images/favicon.ico" type="image/gif" />
   <meta name="description" content="Engenharia" />
   <meta name="author" content="Matheus Gomes Pereira" />
-
+  <!--Formulário-->
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
   <title>Haja Luz Engenharia</title>
 
   <!-- slider stylesheet -->
@@ -519,38 +522,41 @@
         <h2>
           Contate-nos
         </h2>
-      </div>
       <div class="row">
-        <div class="col-md-9 mx-auto">
-          <div class="form_container">
-            <form action="https://getform.io/f/631a13f5-c560-490f-9364-fbcfd36171ef" method="post">
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" placeholder="Nome" name="Nome"/>
-                </div>
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" placeholder="Sobrenome" name="Sobrenome"/>
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="form-group col-md-6">
-                  <input type="email" class="form-control" placeholder="Email" name="Email"/>
-                </div>
-                <div class="form-group col-md-6">
-                  <input type="text" class="form-control" placeholder="Telefone para Contato" name="Telefone para Contato"/>
-                </div>
-              </div>
-              <div class="form-group ">
-                <input type="text" class="message-box" placeholder="Mensagem" name="Mensagem"/>
-              </div>
-              <div class="btn-box">
-                <button type="submit">Enviar</button>
-              </div>
-            </form>
+  <div class="col-md-9 mx-auto">
+    <div class="form_container">
+      <form id="formContato">
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="Nome" name="nome" required>
+          </div>
+          <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="Sobrenome" name="sobrenome" required>
           </div>
         </div>
-      </div>
+
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <input type="email" class="form-control" placeholder="Email" name="email" required>
+          </div>
+          <div class="form-group col-md-6">
+            <input type="text" class="form-control" placeholder="Telefone para Contato" name="telefone_contato">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <textarea class="message-box" placeholder="Mensagem" name="mensagem" required></textarea>
+        </div>
+
+        <div class="btn-box">
+          <button type="submit">Enviar</button>
+        </div>
+
+      </form>
     </div>
+  </div>
+</div>
   </section>
   <!-- end contact section -->
 

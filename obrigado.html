@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obrigado!</title>
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #000000;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: #fff;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 500px;
+      padding: 40px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 0 25px rgba(242, 193, 46, 0.4);
+      animation: fadeIn 1.2s ease-out forwards, glowPulse 2.5s infinite ease-in-out;
+      opacity: 0;
+      border: 2px solid #F2C12E;
+    }
+
+    .logo {
+      width: 110px;
+      height: 110px;
+      margin-bottom: 20px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #F2C12E;
+      background: #fff;
+      box-shadow: 0 0 20px rgba(242, 193, 46, 0.8);
+      animation: glowPulse 2.5s infinite ease-in-out;
+    }
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
+      font-weight: 700;
+      color: #F2C12E;
+      text-shadow: 0 0 10px rgba(242, 193, 46, 0.9),
+                   0 0 20px rgba(242, 193, 46, 0.7),
+                   0 0 30px rgba(242, 193, 46, 0.5);
+      animation: glowPulse 2.5s infinite ease-in-out;
+    }
+
+    p {
+      font-size: 18px;
+      opacity: 0.9;
+      margin-bottom: 25px;
+    }
+
+    .loader {
+      margin: 0 auto;
+      border: 4px solid rgba(255, 255, 255, 0.2);
+      border-top: 4px solid #F2C12E;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      animation: spin 1s linear infinite, glowPulse 2.5s infinite ease-in-out;
+      box-shadow: 0 0 15px rgba(242, 193, 46, 0.8);
+    }
+
+    /* Animação de entrada */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Efeito de brilho pulsante */
+    @keyframes glowPulse {
+      0% {
+        box-shadow: 0 0 10px rgba(242, 193, 46, 0.4),
+                    0 0 20px rgba(242, 193, 46, 0.3);
+      }
+      50% {
+        box-shadow: 0 0 20px rgba(242, 193, 46, 0.9),
+                    0 0 40px rgba(242, 193, 46, 0.7);
+      }
+      100% {
+        box-shadow: 0 0 10px rgba(242, 193, 46, 0.4),
+                    0 0 20px rgba(242, 193, 46, 0.3);
+      }
+    }
+
+    /* Loader girando */
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <!-- Logotipo -->
+    <img src="/images/slider2.png" class="logo" alt="Logo do site">
+
+    <h1>Obrigado pelo contato!</h1>
+    <p>Recebemos sua mensagem e retornaremos o mais breve possível.</p>
+
+    <div class="loader"></div>
+
+    <p style="margin-top: 20px; font-size: 14px; opacity: 0.7;">
+      Você será redirecionado automaticamente.
+    </p>
+  </div>
+
+  <script>
+    // Redireciona após 3 segundos
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 3000);
+  </script>
+</body>
+</html>

@@ -40,3 +40,38 @@ function myMap() {
     };
     var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
 }
+
+<script>
+  // Inicializa o EmailJS
+  emailjs.init("1ZEx6szUU7mPooXxu");
+
+  const form = document.getElementById("formContato");
+  const button = form.querySelector("button");
+
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // Ativa loading no botão
+    button.disabled = true;
+    button.innerHTML = "Enviando... ⏳";
+
+    emailjs.sendForm("service_2smj5r7", "template_qvfn6bj", form)
+      .then(() => {
+
+        // Limpa o formulário
+        form.reset();
+
+        // Redireciona para página de obrigado
+        window.location.href = "obrigado.html";
+
+      })
+      .catch((error) => {
+        console.error("Erro:", error);
+        alert("Erro ao enviar. Tente novamente.");
+
+        // Restaura o botão
+        button.disabled = false;
+        button.innerHTML = "Enviar";
+      });
+  });
+</script>
