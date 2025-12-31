@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Obrigado!</title>
+
+  <!-- CSS principal do site -->
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/responsive.css">
 
@@ -11,56 +13,57 @@
     body {
       margin: 0;
       padding: 0;
-      height: 100vh;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #000000;
+      background: linear-gradient(135deg, #000000, #1a1a1a);
       font-family: "Segoe UI", Arial, sans-serif;
       color: #fff;
       text-align: center;
-      overflow: hidden;
+      padding: 20px;
     }
 
     .container {
-      max-width: 500px;
-      padding: 40px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 15px;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 0 25px rgba(242, 193, 46, 0.4);
-      animation: fadeIn 1.2s ease-out forwards, glowPulse 2.5s infinite ease-in-out;
-      opacity: 0;
+      width: 100%;
+      max-width: 420px;
+      padding: 35px 25px;
+      background: rgba(255, 255, 255, 0.06);
+      border-radius: 18px;
+      backdrop-filter: blur(10px);
       border: 2px solid #F2C12E;
+      box-shadow: 0 0 25px rgba(242, 193, 46, 0.4);
+      animation: fadeIn 1.2s ease-out forwards;
+      opacity: 0;
     }
 
+    /* LOGO RESPONSIVA */
     .logo {
-      width: 110px;
-      height: 110px;
+      width: 70%;
+      max-width: 200px;
+      height: auto;
       margin-bottom: 20px;
       border-radius: 50%;
       object-fit: cover;
       border: 4px solid #F2C12E;
       background: #fff;
-      box-shadow: 0 0 20px rgba(242, 193, 46, 0.8);
+      box-shadow: 0 0 25px rgba(242, 193, 46, 0.8);
       animation: glowPulse 2.5s infinite ease-in-out;
     }
 
     h1 {
-      font-size: 36px;
+      font-size: 32px;
       margin-bottom: 10px;
       font-weight: 700;
       color: #F2C12E;
-      text-shadow: 0 0 10px rgba(242, 193, 46, 0.9),
-                   0 0 20px rgba(242, 193, 46, 0.7),
-                   0 0 30px rgba(242, 193, 46, 0.5);
-      animation: glowPulse 2.5s infinite ease-in-out;
+      text-shadow: 0 0 10px rgba(242, 193, 46, 0.9);
     }
 
     p {
-      font-size: 18px;
+      font-size: 17px;
       opacity: 0.9;
       margin-bottom: 25px;
+      line-height: 1.5;
     }
 
     .loader {
@@ -68,10 +71,9 @@
       border: 4px solid rgba(255, 255, 255, 0.2);
       border-top: 4px solid #F2C12E;
       border-radius: 50%;
-      width: 50px;
-      height: 50px;
+      width: 55px;
+      height: 55px;
       animation: spin 1s linear infinite, glowPulse 2.5s infinite ease-in-out;
-      box-shadow: 0 0 15px rgba(242, 193, 46, 0.8);
     }
 
     /* Animação de entrada */
@@ -82,24 +84,23 @@
 
     /* Efeito de brilho pulsante */
     @keyframes glowPulse {
-      0% {
-        box-shadow: 0 0 10px rgba(242, 193, 46, 0.4),
-                    0 0 20px rgba(242, 193, 46, 0.3);
-      }
-      50% {
-        box-shadow: 0 0 20px rgba(242, 193, 46, 0.9),
-                    0 0 40px rgba(242, 193, 46, 0.7);
-      }
-      100% {
-        box-shadow: 0 0 10px rgba(242, 193, 46, 0.4),
-                    0 0 20px rgba(242, 193, 46, 0.3);
-      }
+      0% { box-shadow: 0 0 10px rgba(242, 193, 46, 0.4); }
+      50% { box-shadow: 0 0 25px rgba(242, 193, 46, 0.9); }
+      100% { box-shadow: 0 0 10px rgba(242, 193, 46, 0.4); }
     }
 
     /* Loader girando */
     @keyframes spin {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
+    }
+
+    /* Ajustes extras para celular */
+    @media (max-width: 480px) {
+      h1 { font-size: 28px; }
+      p { font-size: 16px; }
+      .container { padding: 30px 20px; }
+      .logo { width: 80%; max-width: 220px; }
     }
   </style>
 </head>
@@ -108,7 +109,7 @@
   <div class="container">
 
     <!-- Logotipo -->
-    <img src="/images/slider2.png" class="logo" alt="Logo do site">
+    <img src="images/slider2.png" class="logo" alt="Logo-obrigado">
 
     <h1>Obrigado pelo contato!</h1>
     <p>Recebemos sua mensagem e retornaremos o mais breve possível.</p>
@@ -120,8 +121,8 @@
     </p>
   </div>
 
- <script>
-    // Redireciona após 3 segundos
+  <script>
+    // Redireciona após 8 segundos
     setTimeout(() => {
       window.location.href = "index.html";
     }, 8000);
